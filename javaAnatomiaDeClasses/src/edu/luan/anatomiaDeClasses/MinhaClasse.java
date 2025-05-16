@@ -29,7 +29,7 @@ public class MinhaClasse {
         String primeiroNome= "Luan";
         String segundoNome="Dias";
 
-        String nomeCompleto = nomeCompleto(primeiroNome, segundoNome);
+        //String nomeCompleto = nomeCompleto(primeiroNome, segundoNome);
 
         System.out.println(nomeCompleto(primeiroNome, segundoNome));
         
