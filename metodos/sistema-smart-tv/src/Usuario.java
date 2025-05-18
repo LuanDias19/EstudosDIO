@@ -1,7 +1,7 @@
 public class Usuario {
-    
+
     public static void main(String[] args) {
-        
+
         SmartTV smartTV = new SmartTV();
 
         smartTV.subirCanal();
@@ -10,8 +10,6 @@ public class Usuario {
         smartTV.subirCanal();
         smartTV.subirCanal();
         smartTV.descerCanal();
-
-
 
         smartTV.aumentarVolume();
         smartTV.aumentarVolume();
