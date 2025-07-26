@@ -174,16 +174,26 @@ public class Main {
          * }
          */
 
-        String[] sujeitos = { "O programador", "A IA", "O bug", "O código", "O computador" };
-        String[] verbos = { "compila", "quebra", "resolve", "executa", "reinicia" };
-        String[] objetos = { "o sistema", "a rotina", "o algoritmo", "o terminal", "o mundo" };
+        /*
+         * var male = new Person("João", 30);
+         * var female = new Person("Maria", 24);
+         * 
+         * male.incAge();
+         * 
+         * System.out.println("\nNome: " + male.getName() + "\nIdade: " +
+         * male.getAge());
+         * System.out.println("\nNome: " + female.getName() + "\nIdade: " +
+         * female.getAge());
+         * 
+         * 
+         * var person = new Person("João", 30);
+         * System.out.println(person.getInfo());
+         * System.out.println(person.name());
+         */
 
-        for (int i = 0; i < 4; i++) {
-            String linha = sujeitos[(int) (Math.random() * sujeitos.length)] + " " +
-                    verbos[(int) (Math.random() * verbos.length)] + " " +
-                    objetos[(int) (Math.random() * objetos.length)] + ".";
-            System.out.println(linha);
-        }
+        var person = new Person1("João", 12);
+        System.out.println(person);
+        System.out.println(person.name());
 
     }
 
