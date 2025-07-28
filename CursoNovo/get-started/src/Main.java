@@ -194,6 +194,7 @@ public class Main {
         var person = new Person1("João", 12);
         System.out.println(person);
         System.out.println(person.name());
+        person.name();
 
     }
 
