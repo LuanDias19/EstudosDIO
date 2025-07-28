@@ -1,0 +1,181 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body,
+html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Container capivarinhas - fundo */
+.capivarinhas-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0;
+}
+
+/* Capivara animada */
+.capivara {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  animation-name: subir;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  user-select: none;
+}
+
+@keyframes subir {
+  0% {
+    bottom: 0;
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+
+/* Seções da página */
+.secao {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+/* Primeira seção (fundo azul escuro) */
+.hero {
+  background: linear-gradient(to right, #3a3939, #2d51b4);
+  color: white;
+}
+
+#onda1 {
+  background: linear-gradient(to right, #2d51b4, #3a3939);
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  line-height: 0;
+  position: relative;
+  z-index: 0;
+  transform: rotate(180deg);
+}
+
+#onda2 {
+  background: #222;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  line-height: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.onda svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+/* Segunda seção (cor clara) */
+.secundaria {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.conteudo-principal,
+.conteudo-secundario {
+  max-width: 800px;
+}
+
+/* Títulos e parágrafos */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botão */
+.cta-button {
+  background-color: #e67e22;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta-button:hover {
+  background-color: #d35400;
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: #ddd;
+  background: #222;
+}
+
+.imagem-secundaria {
+  display: block; /* faz a imagem ocupar uma "linha" sozinha */
+  max-width: 100%; /* limita largura máxima para não estourar */
+  height: auto; /* mantém proporção */
+  margin: 2rem auto 0; /* centraliza horizontalmente e dá espaço acima */
+  border-radius: 8px; /* opcional: cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra suave */
+}
+
+#github-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+#github-link:hover {
+  color: #b95300;
+}
+
+#github-link:visited {
+  color: rgb(255, 255, 255);
+}
