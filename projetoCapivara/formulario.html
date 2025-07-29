@@ -3,20 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulário Capivara</title>
+    <link rel="icon" href="images/capivara.png" type="image/png" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <div class="logo">Capivara</div>
-      <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="images/miniCapivara.png"
+            alt="Capivara"
+            class="icon-capivara"
+            height="60"
+          />
+        </a>
+      </div>
+
+      <!-- Menu sanduíche -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <nav id="nav-menu">
         <a href="index.html">Início</a>
-        <a href="caixa-contato">Contato</a>
+        <a href="contato.html">Contato</a>
       </nav>
     </header>
 
     <section class="secao hero">
-      <h1 class="titulo-principal">Participe da Iniciativa Capivara!</h1>
+      <h1 class="titulo">Participe da Iniciativa Capivara!</h1>
       <div class="conteudo-principal">
         <form id="form-capivara" class="formulario-capivara">
           <fieldset>
@@ -79,19 +93,16 @@
       </div>
     </section>
 
-    <div id="onda1" class="onda">
-      <svg
-        viewBox="0 0 1440 100"
-        preserveAspectRatio="none"
-        style="transform: rotate(180deg); display: block"
-      >
+    <div id="onda3" class="onda">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
         <path
-          fill="#222"
-          d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z"
+          fill="#f8f9fa"
+          d="M0,100 C480,0 960,100 1440,0 L1440,100 L0,100 Z"
         ></path>
       </svg>
     </div>
 
+    <!-- Rodapé -->
     <footer class="rodape">© 2025 Capivara Iniciativa</footer>
     <footer class="rodape">
       <p>

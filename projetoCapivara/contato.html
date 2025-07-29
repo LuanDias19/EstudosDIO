@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capivara Iniciativa</title>
+    <link rel="icon" href="images/capivara.png" type="image/png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="images/miniCapivara.png"
+            alt="Capivara"
+            class="icon-capivara"
+            height="60"
+          />
+        </a>
+      </div>
+
+      <!-- Menu sanduíche -->
+      <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a href="index.html">
+            <img
+              src="images/miniCapivara.png"
+              alt="Capivara"
+              class="icon-capivara"
+              height="60"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Navegação
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="formulario.html">Formulário</a>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Pesquisar"
+                  aria-label="Pesquisar"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Buscar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Seção principal -->
+    <section class="secao hero">
+      <div class="conteudo-principal container py-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card shadow-lg">
+              <div class="row g-0 align-items-center">
+                <h2
+                  class="mb-4 text-center"
+                  style="color: #6c63ff; font-weight: 900"
+                >
+                  Sobre mim
+                </h2>
+                <div class="col-md-4 text-center p-3">
+                  <img
+                    src="images/Luan-3x4.jpg"
+                    class="img-fluid"
+                    alt="Luan Mariano Dias"
+                    style="max-width: 160px; border-radius: 12px"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-weight: 700">
+                      Luan Mariano Dias
+                    </h5>
+                    <p class="card-text">
+                      Olá, eu sou o Luan, o criador deste projeto.<br />
+                      Tenho 18 anos e estou cursando Análise e Desenvolvimento
+                      de Sistemas na FIEL.
+                    </p>
+                    <p class="card-text">
+                      <strong>Email:</strong> lumardias07@gmail.com<br />
+                      <strong>LinkedIn:</strong>
+                      <a
+                        href="https://www.linkedin.com/in/luan-dias-3583682b4/"
+                        target="_blank"
+                      >
+                        linkedin.com/in/luan-dias-3583682b4 </a
+                      ><br />
+                      <strong>Telefone:</strong> (19) 99748-0533
+                    </p>
+                    <a
+                      href="https://github.com/LuanDias19"
+                      target="_blank"
+                      class="btn btn-primary"
+                      >Meu GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="rodape text-center py-3 bg-light mt-5">
+      <p class="mb-0">© 2025 Capivara Iniciativa</p>
+      <p>
+        Desenvolvido por
+        <a id="github-link" href="https://github.com/LuanDias19" target="_blank"
+          >Luan M. Dias</a
+        >
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
