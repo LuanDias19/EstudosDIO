@@ -13,45 +13,69 @@ html {
   position: relative;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: #fff;
 }
 
-/* Container capivarinhas - fundo */
-.capivarinhas-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  overflow: visible;
-  z-index: 0;
+/* Cabeçalho */
+header {
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
-/* Capivara animada */
-.capivara {
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  animation-name: subir;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  user-select: none;
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
-@keyframes subir {
-  0% {
-    bottom: 0;
-    opacity: 0.8;
-    transform: translateX(0);
-  }
-  100% {
-    bottom: 100vh;
-    opacity: 0;
-    transform: translateX(30px);
-  }
+header nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-/* Seções da página */
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Título principal */
+.titulo-principal {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ff9800;
+  text-shadow: 2px 2px 8px rgba(44, 62, 80, 0.3);
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #3a3939, #2d51b4);
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  transition: color 0.3s;
+}
+
+.titulo-principal:hover {
+  color: #e67e22;
+}
+
+h1.titulo-principal {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ff9800;
+  text-shadow: 2px 2px 8px rgba(44, 62, 80, 0.3);
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 40px auto 32px auto;
+  background: none; /* Remove o fundo retangular */
+  padding: 0;
+  border-radius: 0;
+  display: block;
+}
+
+/* Seções */
 .secao {
   position: relative;
   z-index: 1;
@@ -64,31 +88,34 @@ html {
   padding: 4rem 2rem;
 }
 
-/* Primeira seção (fundo azul escuro) */
 .hero {
   background: linear-gradient(to right, #3a3939, #2d51b4);
   color: white;
+  flex-direction: column;
+}
+
+.secundaria {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+/* Ondas decorativas */
+.onda {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
 }
 
 #onda1 {
   background: linear-gradient(to right, #2d51b4, #3a3939);
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  line-height: 0;
-  position: relative;
-  z-index: 0;
   transform: rotate(180deg);
 }
 
 #onda2 {
   background: #222;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  line-height: 0;
-  position: relative;
-  z-index: 0;
 }
 
 .onda svg {
@@ -97,20 +124,12 @@ html {
   height: 100px;
 }
 
-/* Segunda seção (cor clara) */
-.secundaria {
-  background-color: #f8f9fa;
-  color: #333;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
+/* Conteúdo */
 .conteudo-principal,
 .conteudo-secundario {
   max-width: 800px;
 }
 
-/* Títulos e parágrafos */
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -129,16 +148,81 @@ p {
   margin-right: auto;
 }
 
-/* Botão */
+/* Formulário */
+.formulario-capivara {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formulario-capivara fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.formulario-capivara legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6c63ff;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.formulario-capivara label {
+  font-weight: 600;
+  color: #2d51b4;
+  margin-bottom: 6px;
+  display: block;
+  text-align: left;
+}
+
+.formulario-capivara input,
+.formulario-capivara textarea {
+  padding: 10px;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #f8f9fa;
+  transition: border 0.2s, box-shadow 0.2s;
+  margin-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario-capivara input:focus,
+.formulario-capivara textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.15);
+  outline: none;
+}
+
+.botoes-form {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Botão padrão */
 .cta-button {
-  background-color: #e67e22;
-  color: white;
-  padding: 1rem 2rem;
+  background: #6c63ff;
+  color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
+  padding: 10px 24px;
+  font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.2s;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -146,7 +230,18 @@ p {
 }
 
 .cta-button:hover {
-  background-color: #d35400;
+  background: #5548c8;
+}
+
+/* Mensagem de agradecimento */
+#mensagem-obrigado {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Rodapé */
@@ -158,15 +253,17 @@ p {
   background: #222;
 }
 
+/* Imagem responsiva */
 .imagem-secundaria {
-  display: block; /* faz a imagem ocupar uma "linha" sozinha */
-  max-width: 100%; /* limita largura máxima para não estourar */
-  height: auto; /* mantém proporção */
-  margin: 2rem auto 0; /* centraliza horizontalmente e dá espaço acima */
-  border-radius: 8px; /* opcional: cantos arredondados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra suave */
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Links */
 #github-link {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -178,4 +275,35 @@ p {
 
 #github-link:visited {
   color: rgb(255, 255, 255);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .formulario-capivara {
+    padding: 24px 16px;
+  }
+
+  .titulo-principal {
+    font-size: 2rem;
+  }
+
+  .botoes-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.caixa-warning {
+  background: #fff3cd;
+  color: #856404;
+  border: 2px solid #ffeeba;
+  border-radius: 12px;
+  padding: 18px 24px;
+  max-width: 350px;
+  margin: 24px auto;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+  font-size: 1.1rem;
+  text-align: center;
+  z-index: 10;
+  position: relative;
 }
