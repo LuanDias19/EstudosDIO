@@ -1,11 +1,12 @@
-/* Reset básico */
+/* =======================
+   RESET E GERAL
+======================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo geral da página */
 body,
 html {
   height: 100%;
@@ -15,7 +16,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Cabeçalho */
+/* =======================
+   HEADER E NAVEGAÇÃO
+======================= */
 header {
   background: linear-gradient(to right, #3a3939, #2d51b4);
   color: white;
@@ -42,7 +45,6 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* Menu sanduíche */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -77,7 +79,9 @@ header nav a:hover {
   }
 }
 
-/* Título principal */
+/* =======================
+   TÍTULOS E SEÇÕES
+======================= */
 .titulo,
 h1.titulo {
   font-size: 2.5rem;
@@ -97,7 +101,6 @@ h1.titulo {
   color: #e67e22;
 }
 
-/* Seções */
 .secao {
   position: relative;
   z-index: 1;
@@ -123,20 +126,30 @@ h1.titulo {
   text-align: center;
 }
 
-/* Ondas decorativas */
+.terciaria {
+  background-color: #f8f9fa;
+  padding: 5rem 2rem;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* =======================
+   ONDAS DECORATIVAS
+======================= */
 .onda {
-  position: relative;
   width: 100%;
-  height: 100px;
-  overflow: auto;
+  overflow: hidden;
+  line-height: 0;
+  position: relative;
 }
 
 #onda1 {
-  background: linear-gradient(to left, #2d51b4, #3a3939);
+  background: linear-gradient(to right, #2d51b4, #3a3939);
   transform: rotate(180deg);
 }
 
 #onda3 {
+  background-color: linear-gradient(to right, #2d51b4, #3a3939);
   background: #222;
   transform: rotate(180deg);
 }
@@ -151,7 +164,9 @@ h1.titulo {
   height: 100px;
 }
 
-/* Conteúdo */
+/* =======================
+   CONTEÚDO PRINCIPAL
+======================= */
 .conteudo-principal,
 .conteudo-secundario {
   max-width: 800px;
@@ -175,7 +190,9 @@ p {
   margin-right: auto;
 }
 
-/* Formulário */
+/* =======================
+   FORMULÁRIO
+======================= */
 .formulario-capivara {
   background: #fff;
   padding: 32px 24px;
@@ -274,7 +291,9 @@ p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Rodapé */
+/* =======================
+   RODAPÉ E LINKS
+======================= */
 .rodape {
   text-align: center;
   padding: 0.5rem;
@@ -283,17 +302,6 @@ p {
   background: #222;
 }
 
-/* Imagem responsiva */
-.imagem-secundaria {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 2rem auto 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Links */
 #github-link {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -307,7 +315,21 @@ p {
   color: rgb(255, 255, 255);
 }
 
-/* Responsividade */
+/* =======================
+   IMAGENS
+======================= */
+.imagem-secundaria {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* =======================
+   RESPONSIVIDADE
+======================= */
 @media (max-width: 480px) {
   .formulario-capivara {
     padding: 24px 16px;
@@ -321,7 +343,9 @@ p {
   }
 }
 
-/* Caixa de aviso */
+/* =======================
+   CAIXA DE AVISO
+======================= */
 .caixa-warning {
   background: #6e6441;
   color: #856404;
@@ -337,7 +361,9 @@ p {
   position: relative;
 }
 
-/* Card do contato */
+/* =======================
+   CARD CONTATO
+======================= */
 .card {
   align-items: center;
   background: #fff;
