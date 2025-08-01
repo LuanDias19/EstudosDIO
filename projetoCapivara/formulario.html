@@ -73,23 +73,28 @@
               aria-label="Escreva um comentário se quiser"
             ></textarea>
 
+            <label for="email">💬 Email:</label>
+            <textarea
+              id="email"
+              name="email"
+              rows="1"
+              aria-label="Escreva seu email"
+            ></textarea>
+
             <div class="botoes-form">
               <button
-                type="submit"
+                onclick="salvarDados()"
                 class="cta-button"
                 id="botao-enviar"
-                disabled
               >
                 Enviar
               </button>
               <button type="reset" class="cta-button">Limpar</button>
             </div>
+
+            <div><p id="mensagem"></p></div>
           </fieldset>
         </form>
-
-        <div id="mensagem-obrigado" style="display: none; margin-top: 20px">
-          <b>Obrigado por ajudar as capivárias!</b>
-        </div>
       </div>
     </section>
 
@@ -112,5 +117,71 @@
         >
       </p>
     </footer>
+
+    <script>
+      function salvarDados() {
+        let nome = document.getElementById("nome").value,
+          idade = document.getElementById("idade").value,
+          cidade = document.getElementById("cidade").value,
+          comentario = document.getElementById("comentario").value,
+          email = document.getElementById("email").value;
+
+        localStorage.setItem("nome", nome);
+        localStorage.setItem("idade", idade);
+        localStorage.setItem("cidade", cidade);
+        localStorage.setItem("comentario", comentario);
+        localStorage.setItem("email", email);
+
+        document.getElementById("mensagem-obrigado").style.display = "block";
+      }
+
+      function exibirMensagem(mensagem) {
+        let pMsg = document.getElementById("mensagem");
+        pMsg.innerText = mensagem;
+      }
+
+      function validarFormulario() {
+        let nome = document.getElementById("nome").value,
+          idade = document.getElementById("idade").value,
+          cidade = document.getElementById("cidade").value;
+
+        if (nome && idade && cidade) {
+          document.getElementById("botao-enviar").disabled = false;
+        } else {
+          document.getElementById("botao-enviar").disabled = true;
+        }
+      }
+
+      window.onload = function () {
+        let nomeArmazenado = localStorage.getItem("nome");
+        if (nomeArmazenado) {
+          exibirMensagem("Olá " + nomeArmazenado + ", seu nome está salvo");
+        } else {
+          exibirMensagem("Digite seu nome acima e clique em 'Enviar'");
+        }
+
+        (idadeArmazenada = localStorage.getItem("idade")),
+          (cidadeArmazenada = localStorage.getItem("cidade")),
+          (comentarioArmazenado = localStorage.getItem("comentario")),
+          (emailArmazenado = localStorage.getItem("email"));
+
+        if (nomeArmazenado) {
+          document.getElementById("nome").value = nomeArmazenado;
+        }
+        if (idadeArmazenada) {
+          document.getElementById("idade").value = idadeArmazenada;
+        }
+        if (cidadeArmazenada) {
+          document.getElementById("cidade").value = cidadeArmazenada;
+        }
+        if (comentarioArmazenado) {
+          document.getElementById("comentario").value = comentarioArmazenado;
+        }
+        if (emailArmazenado) {
+          document.getElementById("email").value = emailArmazenado;
+        }
+      };
+    </script>
+    }
   </body>
 </html>
